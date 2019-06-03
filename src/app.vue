@@ -9,13 +9,13 @@
         <div class="photo-type" v-if="item.img">
           <img :src="item.img"/>
           <div class="right">
-            <p>{{item.title}}</p>
-            <span>{{item.showTime}}</span>
+            <p class="item-title" @click="openUrl(item.url)">{{item.title}}</p>
+            <span class="item-info">{{item.showInfo}}</span>
           </div>
         </div>
         <div class="text-type" v-else>
-          <p>{{item.title}}</p>
-          <span>{{item.showTime}}</span>
+          <p class="item-title" @click="openUrl(item.url)">{{item.title}}</p>
+          <span class="item-info">{{item.showTime}}</span>
         </div>
       </div>      
     </div>
@@ -32,7 +32,8 @@ export default {
         img: 'static/testImage/1.jpg',
         title: '公有云厂商VS私有云厂商谁更强？',
         url: 'https://www.baidu.com',
-        publishTime: 1553043600000
+        publishTime: 1553043600000,
+        source: '播云客'
       }, {
         title: '个性需求接受or拒绝，揭秘产品组和项目组的三两事',
         url: 'https://www.baidu.com',
@@ -53,11 +54,15 @@ export default {
   created(){
     for(var i = 0; i < this.items.length; i++){
       this.items[i].showTime = dateUtil.simpleFormat(this.items[i].publishTime, 'MM-dd');
+      this.items[i].showInfo = (this.items[i].source ? this.items[i].source + ' ' : '') + this.items[i].showTime;
     }
   },
   mounted(){
   },
   methods: {
+    openUrl(url){
+      window.open(url);
+    }
   }
 }
 </script>
