@@ -2,7 +2,9 @@
   <div class="news">
     <div class="header">
       <span class="title">{{i18n.News}}</span>
+      <!--
       <span class="more">{{i18n.More}}</span>
+      -->
     </div>
     <div class="content">
       <div class="new-item" v-for="(item, $index) in items" :key="item">
