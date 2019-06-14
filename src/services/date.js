@@ -6,7 +6,7 @@ module.exports = {
      * ts 时间
      * fmt 格式化
      */
-    simpleFormat: function(ts, fmt) {
+    format: function(ts, fmt) {
         if (!ts) return '';
         if (!fmt) fmt = 'yyyy-MM-dd hh:mm:ss'
         var dt = new Date(ts)

@@ -25,6 +25,7 @@
             width: 102px;
             height: 68px;
             margin-right: 12px;
+            background: #F1F1F1;
         }
         .right{
             flex: 1;
@@ -67,5 +68,21 @@
         text-overflow:ellipsis;
         white-space: nowrap;
         color:rgba(153,153,153,1);
+    }
+}
+
+.error-info{
+    height: 100px;
+    text-align: center;
+    padding-top: 40px;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    img{
+        width: 24px;
+        vertical-align: text-bottom;
+    }
+    span{
+        font-size: 12px;
+        cursor: pointer;
     }
 }

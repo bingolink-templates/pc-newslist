@@ -98,7 +98,7 @@ module.exports = {
       'vue$': 'vue/dist/vue.esm.js',
       'asset': resolve('src/asset'),
       'module': resolve('src/module'),
-      'util': resolve('src/util')
+      'ser': resolve('src/services')
     },
     extensions: ['*', '.js', '.vue', '.json']
   },
