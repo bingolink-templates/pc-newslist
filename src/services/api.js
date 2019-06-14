@@ -25,7 +25,7 @@ function getImageUrl(resourceUrl, accessToken) {
 module.exports = {
     getNews(success, error){
         app.linkplugin.ajax({
-            url: window.env.comwidgetsUri + '/news?limit=5&offset=0',
+            url: window.env.comwidgetsUri + '/news/list?limit=5&offset=0',
             success: function(res){
                 app.linkplugin.getAccessToken(function(at){
                     var datas = res.data;
