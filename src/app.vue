@@ -9,7 +9,7 @@
     <div class="content">
       <div class="new-item" v-for="(item, $index) in items" :key="item">
         <div class="photo-type" v-if="item.img">
-          <img :src="item.img" onerror="javascript:this.src='static/pic-err.png'"/>
+          <img :src="item.img" @click="openUrl(item)" onerror="javascript:this.src='static/pic-err.png'"/>
           <div class="right">
             <p class="item-title" @click="openUrl(item)">{{item.title}}</p>
             <span class="item-info">{{item.showInfo}}</span>
