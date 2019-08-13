@@ -43,6 +43,9 @@ export default {
   },
   created(){
     this.getDatas();
+    app.linkplugin.listenRefreshWidgetData(() => {
+      this.getDatas();
+    });
   },
   mounted(){
   },
